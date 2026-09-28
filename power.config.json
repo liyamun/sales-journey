@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "appId": "",
+  "appDisplayName": "Sales Journey",
+  "region": "prod",
+  "environmentId": "REPLACE-WITH-YOUR-ENVIRONMENT-ID",
+  "description": "365titans - CRM-kant van de Sales Hub: prospect, lead, klant",
+  "buildPath": "dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:5181",
+  "logoPath": "Default",
+  "connectionReferences": {},
+  "databaseReferences": {}
+}

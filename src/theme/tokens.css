@@ -1,0 +1,113 @@
+/*
+ * Design tokens — the 365Titans Design System (v2.0), as summarised in the company's
+ * titan-pptx-branding skill. If this file and the design system disagree, the design system wins.
+ *
+ *   P600 #7030A0  THE brand accent        P700/P800  purple text on light
+ *   P50–P200      soft fills, selections  — never for text
+ *   INK950/600/300  text / muted / border  CREAM #EFECE6  page background
+ *   Brand gradient #3D21AC -> #8552DA: only for a hero surface, never behind running text
+ *   Status colours (success/warning/danger) are for status only, never as brand accent.
+ *
+ * The three Klantreis phases keep their own colour so the app still reads like the Miro board,
+ * taken from the design system's phase palette (blue, orange, teal) with darker inks for text.
+ *
+ * Fonts: Poppins for headings and big numbers, IBM Plex Sans for text. They are BUNDLED (npm
+ * @fontsource), not loaded from Google: the Power Apps host may block external font requests.
+ */
+:root {
+  --p50: #f9f5fc;
+  --p100: #f1e8f7;
+  --p200: #e0cfed;
+  --p300: #c5a8dc;
+  --p500: #8d47c2;
+  --p600: #7030a0;
+  --p700: #5d2886;
+  --p800: #471e66;
+  --p900: #311547;
+  --grad-a: #3d21ac;
+  --grad-b: #8552da;
+
+  --ink: #18131b;
+  --text: #18131b;
+  --text-2: #675c70;
+  --text-3: #7d7286;
+
+  --line: #e1dbe6;
+  --line-soft: #ebe6ef;
+  --surface: #efece6;
+  --panel: #f5f5f5;
+  --white: #fff;
+
+  --primary: var(--p600);
+  --primary-700: var(--p700);
+  --primary-surface: var(--p100);
+
+  /* Klantreis phases (design-system phase palette; inks darkened for AA contrast on the light fill) */
+  --prospect: #0f5fae;
+  --prospect-strong: #177bda;
+  --prospect-surface: #e8f2fc;
+  --prospect-border: #b9d7f5;
+  --lead: #936310;
+  --lead-strong: #f39e13;
+  --lead-surface: #fbf1df;
+  --lead-border: #f2d49c;
+  --klant: #1f6f5c;
+  --klant-strong: #63b4a0;
+  --klant-surface: #e4f3ef;
+  --klant-border: #b3dcd1;
+  --stop: #675c70;
+  --stop-surface: #f1eef3;
+  --stop-border: #e1dbe6;
+
+  /* Status */
+  --success: #00af50;
+  --success-ink: #0b6b31;
+  --success-surface: #e1f5e9;
+  --red: #be373e;
+  --red-surface: #fbe9ea;
+
+  --radius: 10px;
+  --rail-w: 240px;
+  --font: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-head: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+.brand-name,
+.phase-title,
+.step-tile .n,
+.kpi .v {
+  font-family: var(--font-head);
+}
+
+a {
+  color: var(--p700);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
